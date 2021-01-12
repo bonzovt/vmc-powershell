@@ -5,8 +5,7 @@ param(
 )
 
 #Connect to HCX Servers
-Connect-HCXServer -Server 'irv-hcx-ent01.corp.ocwen.com' -User $user -Password $pass
-Connect-HCXServer -Server 'atl-hcx-ent01.corp.ocwen.com' -User $user -Password $pass
+Connect-HCXServer -Server $server -User $user -Password $pass
 
 #Import VMs from CSV file into a var
 $vms_in_wave = Import-Csv -Header 'Name' -Path $csvVM
