@@ -5,8 +5,8 @@ param(
 )
 
 Set-PowerCLIConfiguration -DefaultVIServerMode Multiple -Scope Session -confirm:$false
-Connect-ViServer -Server 'irvvmvc02.corp.ocwen.com' -User $user -Password $pass
-Connect-ViServer -Server 'atlvmvc02.corp.ocwen.com' -User $user -Password $pass
+Connect-ViServer -Server $server1 -User $user -Password $pass
+Connect-ViServer -Server $server2 -User $user -Password $pass
 
 $vms_in_wave = Import-Csv -Header 'Name' -Path $VMlist
 $vSphere = Get-VM
